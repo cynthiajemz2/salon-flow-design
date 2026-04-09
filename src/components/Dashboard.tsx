@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Users, Calendar, DollarSign, ArrowUpRight, MoreHorizontal } from 'lucide-react';
-import { COLORS, IMAGES, MOCK_APPOINTMENTS, ROUTES } from '../lib/constants';
+import { TrendingUp, Users, Calendar, Wallet, ArrowUpRight, MoreHorizontal } from 'lucide-react';
+import { COLORS, IMAGES, MOCK_APPOINTMENTS, ROUTES, CURRENCY_SYMBOL } from '../lib/constants';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 
 const Dashboard: React.FC = () => {
   const stats = [
-    { label: "Today's Revenue", value: '$1,280', icon: DollarSign, trend: '+12%', color: 'bg-emerald-50 text-emerald-600' },
+    { label: "Today's Revenue", value: `${CURRENCY_SYMBOL} 128,000`, icon: Wallet, trend: '+12%', color: 'bg-emerald-50 text-emerald-600' },
     { label: "Appointments", value: '24', icon: Calendar, trend: '+4', color: 'bg-blue-50 text-blue-600' },
     { label: "New Clients", value: '8', icon: Users, trend: '+2', color: 'bg-purple-50 text-purple-600' },
     { label: "Growth Rate", value: '18%', icon: TrendingUp, trend: '+3%', color: 'bg-orange-50 text-orange-600' },
@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-serif font-bold text-slate-900">Welcome back, Admin</h1>
-        <p className="text-slate-500">Here's what's happening at L'Éclat Salon today.</p>
+        <p className="text-slate-500 text-lg">Here's what's happening at L'Éclat Salon today.</p>
       </div>
 
       {/* Stats Grid */}
@@ -116,8 +116,8 @@ const Dashboard: React.FC = () => {
               className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 text-white">
-              <h4 className="font-serif text-xl font-bold">L'\u00c9clat Flagship</h4>
-              <p className="text-sm text-white/80">Paris, France</p>
+              <h4 className="font-serif text-xl font-bold">L'Éclat Flagship</h4>
+              <p className="text-sm text-white/80">Nairobi, Kenya</p>
             </div>
           </Card>
           

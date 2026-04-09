@@ -20,6 +20,9 @@ export const ROUTES: Record<View, string> = {
 
 export const API_BASE_URL = '/api';
 
+export const CURRENCY_CODE = 'KES';
+export const CURRENCY_SYMBOL = 'KSh';
+
 export const IMAGES = {
   interior: "https://storage.googleapis.com/dala-prod-public-storage/generated-images/61c1bef5-9e43-4c53-8d37-fda43f771e1e/salon-interior-cb6becea-1775728877229.webp",
   styling: "https://storage.googleapis.com/dala-prod-public-storage/generated-images/61c1bef5-9e43-4c53-8d37-fda43f771e1e/hair-styling-4fd17faa-1775728876929.webp",
@@ -29,24 +32,24 @@ export const IMAGES = {
 };
 
 export const MOCK_APPOINTMENTS: Appointment[] = [
-  { id: '1', client: "Elena Gilbert", service: "Balayage Hair Color", time: "10:00 AM", stylist: "Sarah J.", status: "confirmed", price: 150 },
-  { id: '2', client: "Stefan Salvatore", service: "Gentleman's Cut", time: "11:30 AM", stylist: "Michael R.", status: "pending", price: 45 },
-  { id: '3', client: "Bonnie Bennett", service: "Deep Tissue Massage", time: "01:00 PM", stylist: "Emma L.", status: "confirmed", price: 85 },
-  { id: '4', client: "Caroline Forbes", service: "Manicure & Pedicure", time: "02:30 PM", stylist: "Jessica W.", status: "confirmed", price: 65 },
-  { id: '5', client: "Damon Salvatore", service: "Beard Trim", time: "04:00 PM", stylist: "Michael R.", status: "cancelled", price: 25 },
+  { id: '1', client: "Jane Wanjiku", service: "Balayage Hair Color", time: "10:00 AM", stylist: "Faith M.", status: "confirmed", price: 15000 },
+  { id: '2', client: "John Kamau", service: "Gentleman's Cut", time: "11:30 AM", stylist: "David O.", status: "pending", price: 4500 },
+  { id: '3', client: "Mercy Achieng", service: "Deep Tissue Massage", time: "01:00 PM", stylist: "Grace W.", status: "confirmed", price: 8500 },
+  { id: '4', client: "Esther Nyambura", service: "Manicure & Pedicure", time: "02:30 PM", stylist: "Sarah N.", status: "confirmed", price: 6500 },
+  { id: '5', client: "Peter Mwangi", service: "Beard Trim", time: "04:00 PM", stylist: "David O.", status: "cancelled", price: 2500 },
 ];
 
 export const MOCK_SERVICES: Service[] = [
-  { id: 's1', name: "Signature Haircut", category: "Hair", duration: "45m", price: 60 },
-  { id: 's2', name: "Full Head Balayage", category: "Color", duration: "3h", price: 180 },
-  { id: 's3', name: "Shellac Manicure", category: "Nails", duration: "60m", price: 45 },
-  { id: 's4', name: "Express Facial", category: "Spa", duration: "30m", price: 50 },
-  { id: 's5', name: "Bridal Makeup", category: "Makeup", duration: "90m", price: 120 },
+  { id: 's1', name: "Signature Haircut", category: "Hair", duration: "45m", price: 6000 },
+  { id: 's2', name: "Full Head Balayage", category: "Color", duration: "3h", price: 18000 },
+  { id: 's3', name: "Shellac Manicure", category: "Nails", duration: "60m", price: 4500 },
+  { id: 's4', name: "Express Facial", category: "Spa", duration: "30m", price: 5000 },
+  { id: 's5', name: "Bridal Makeup", category: "Makeup", duration: "90m", price: 12000 },
 ];
 
 export const MOCK_STAFF: Staff[] = [
-  { id: 'st1', name: "Sarah Johnson", role: "Master Stylist", image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80&w=200", rating: 4.9 },
-  { id: 'st2', name: "Michael Rossi", role: "Senior Barber", image: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?auto=format&fit=crop&q=80&w=200", rating: 4.8 },
-  { id: 'st3', name: "Emma Laurent", role: "Esthetician", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200", rating: 5.0 },
-  { id: 'st4', name: "Jessica White", role: "Nail Artist", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200", rating: 4.7 },
+  { id: 'st1', name: "Faith Mutua", role: "Master Stylist", image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80&w=200", rating: 4.9 },
+  { id: 'st2', name: "David Omari", role: "Senior Barber", image: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?auto=format&fit=crop&q=80&w=200", rating: 4.8 },
+  { id: 'st3', name: "Grace Wambui", role: "Esthetician", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200", rating: 5.0 },
+  { id: 'st4', name: "Sarah Njeri", role: "Nail Artist", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200", rating: 4.7 },
 ];

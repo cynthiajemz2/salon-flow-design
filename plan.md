@@ -1,36 +1,20 @@
-# Booking Form Implementation Plan
+# Task: Change stylist names to Kenyan names
 
-Implement a "Book Now" feature in the salon management application using a modal-based form with client-side validation and asynchronous submission.
+## Objective
+Update the placeholder staff and stylist names in the application to common Kenyan names to better reflect the local context.
 
-## 1. Constants Update
-- Add `API_BASE_URL` to `src/lib/constants.ts` to centralize endpoint management.
+## File Changes
 
-## 2. New Component: BookingModal
-- Create `src/components/BookingModal.tsx`.
-- Use shadcn/ui components: `Dialog`, `Form`, `Input`, `Select`, `Button`, `Label`.
-- Implement a form schema using `zod`.
-- Use `react-hook-form` for form state and validation.
-- Input fields:
-  - Client Name (text)
-  - Client Email (email)
-  - Service (select from `MOCK_SERVICES`)
-  - Date (datepicker or input[type=date])
-  - Time (select or input[type=time])
-  - Quantity/Guests (number)
-- Submit logic:
-  - Display "Booking..." state during fetch.
-  - Send POST request to `/api/book-appointment` (simulated).
-  - Use `sonner` to show success toast on completion or error toast on failure.
+### 1. `src/lib/constants.ts`
+- Update `MOCK_STAFF` array with Kenyan names:
+    - Sarah Johnson -> Faith Mutua
+    - Michael Rossi -> David Omari
+    - Emma Laurent -> Grace Wambui
+    - Jessica White -> Sarah Njeri
+- Update `MOCK_APPOINTMENTS` array:
+    - Update `stylist` fields to match new staff names (shortened forms like "Faith M.", "David O.").
+    - Update `client` fields to Kenyan names for consistency (e.g., Jane Wanjiku, John Kamau).
 
-## 3. Update Appointments Page
-- In `src/components/Appointments.tsx`:
-  - Import `BookingModal`.
-  - Maintain `isBookingModalOpen` state.
-  - Attach `onClick={() => setIsBookingModalOpen(true)}` to the "Book Now" button.
-  - Render `<BookingModal open={isBookingModalOpen} onOpenChange={setIsBookingModalOpen} />`.
-
-## 4. Verification
-- Verify form validation (empty fields, invalid email).
-- Verify loading state during submission.
-- Verify toast notifications appear correctly.
-- Ensure responsive design of the modal.
+## Verification
+- Run `validate_build` to ensure no syntax errors.
+- Confirm names are correctly displayed in the UI (mentally based on code changes).

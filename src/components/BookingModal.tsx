@@ -13,7 +13,7 @@ import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { Calendar } from './ui/calendar';
-import { API_BASE_URL, MOCK_SERVICES, COLORS } from '../lib/constants';
+import { API_BASE_URL, MOCK_SERVICES, COLORS, CURRENCY_SYMBOL } from '../lib/constants';
 import { cn } from '../lib/utils';
 
 const bookingSchema = z.object({
@@ -116,7 +116,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ open, onOpenChange }
                 <User size={14} className="text-slate-400" />
                 Full Name
               </Label>
-              <Input placeholder="Jane Doe" {...register('clientName')} className="border-slate-200 focus:border-amber-500 focus:ring-amber-500" />
+              <Input placeholder="Jane Wanjiku" {...register('clientName')} className="border-slate-200 focus:border-amber-500 focus:ring-amber-500" />
               {errors.clientName && <p className="text-xs text-red-500">{String(errors.clientName.message)}</p>}
             </div>
             <div className="space-y-2">
@@ -145,7 +145,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ open, onOpenChange }
                   <SelectContent>
                     {MOCK_SERVICES.map((service) => (
                       <SelectItem key={service.id} value={service.name}>
-                        {service.name} (${service.price})
+                        {service.name} ({CURRENCY_SYMBOL} {service.price.toLocaleString()})
                       </SelectItem>
                     ))}
                   </SelectContent>

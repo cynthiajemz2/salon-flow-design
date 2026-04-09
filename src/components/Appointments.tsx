@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, Search, Calendar as CalendarIcon, Filter, ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react';
-import { COLORS, MOCK_APPOINTMENTS } from '../lib/constants';
+import { COLORS, MOCK_APPOINTMENTS, CURRENCY_SYMBOL } from '../lib/constants';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Badge } from './ui/badge';
@@ -88,7 +88,7 @@ const Appointments: React.FC = () => {
                     <p className="text-xs text-slate-500">Master Stylist</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-bold text-slate-900">${app.price}</p>
+                    <p className="text-sm font-bold text-slate-900">{CURRENCY_SYMBOL} {app.price.toLocaleString()}</p>
                     <Badge 
                       className={cn(
                         "mt-1 capitalize",

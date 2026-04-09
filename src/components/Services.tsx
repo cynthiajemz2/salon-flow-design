@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Search, Plus, Filter, Clock, Tag, MoreVertical } from 'lucide-react';
-import { COLORS, MOCK_SERVICES } from '../lib/constants';
+import { COLORS, MOCK_SERVICES, CURRENCY_SYMBOL } from '../lib/constants';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
@@ -89,7 +89,7 @@ const Services: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 text-slate-500">
                   <Tag size={16} />
-                  <span className="text-sm font-bold text-slate-900">${service.price}</span>
+                  <span className="text-sm font-bold text-slate-900">{CURRENCY_SYMBOL} {service.price.toLocaleString()}</span>
                 </div>
               </div>
 
